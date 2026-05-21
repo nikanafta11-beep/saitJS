@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-graduation-cap"></i>
+
+        Student System
+
+    </div>
+
+    <div id="clock"></div>
+
+</header>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside>
+
+        <button data-section="students">
+
+            <i class="fa-solid fa-users"></i>
+
+            Студенти
+
+        </button>
+
+        <button data-section="add">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            Додати
+
+        </button>
+
+        <button data-section="scholarship">
+
+            <i class="fa-solid fa-trophy"></i>
+
+            Стипендія
+
+        </button>
+
+        <button data-section="expelled">
+
+            <i class="fa-solid fa-user-xmark"></i>
+
+            Відрахування
+
+        </button>
+
+        <button data-section="stats">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            Статистика
+
+        </button>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <!-- STUDENTS -->
+
+        <section id="students"
+                 class="active">
+
+            <div class="top-bar">
+
+                <h2>Список студентів</h2>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="🔍 Пошук..."
+                >
+
+            </div>
+
+            <!-- SIMPLE LIST -->
+
+            <div id="studentList"></div>
+
+            <!-- FULL CARDS -->
+
+            <div id="studentContainer"></div>
+
+        </section>
+
+        <!-- ADD -->
+
+        <section id="add">
+
+            <div class="form-card">
+
+                <h2>Додати студента</h2>
+
+                <form id="studentForm">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Ім'я студента"
+                    >
+
+                    <button type="submit">
+
+                        Додати
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- SCHOLARSHIP -->
+
+        <section id="scholarship">
+
+            <h2>🏆 Стипендія</h2>
+
+            <div id="scholarshipList"></div>
+
+        </section>
+
+        <!-- EXPELLED -->
+
+        <section id="expelled">
+
+            <h2>❌ На відрахування</h2>
+
+            <div id="expelledList"></div>
+
+        </section>
+
+        <!-- STATS -->
+
+        <section id="stats">
+
+            <h2>📊 Статистика</h2>
+
+            <div id="statistics"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- MODAL -->
+
+<div id="modal"
+     class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">
+
+            &times;
+
+        </span>
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p id="browserInfo"></p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
